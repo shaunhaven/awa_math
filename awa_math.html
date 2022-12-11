@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Math</title>
+</head>
+<body>
+    <main>
+        <form class="container p-5 bg-info text-white">
+            " First Number: "
+            <input type="text" value id="num1">
+            <br>
+            " Second Number: "
+            <input type="text" value id="num2">
+            <br>
+            <br>
+            <div class="btn-group">
+            <input type="button" class="btn btn-primary" value="Add" onclick =" return addOutput()">
+            <input type="button" class="btn btn-success" value="Subtract" onclick=" return subOutput()">
+            <input type="button" class="btn btn-warning" value="Multiply" onclick=" return multiplyOutput()">
+            <input type="button" class="btn btn-danger" value="Divide" onclick=" return divideOutput()">
+            </div>
+            <br>
+            <br>
+            " The result is: "
+            <span id="result"></span>
+            <script>
+                function addOutput()
+                {
+                    var a=parseInt(document.getElementById('num1').value);
+                    var b=parseInt(document.getElementById('num2').value);
+                    document.getElementById('result').innerHTML=a+b;
+                }
+                function subOutput()
+                {
+                    var a=parseInt(document.getElementById('num1').value);
+                    var b=parseInt(document.getElementById('num2').value);
+                    document.getElementById('result').innerHTML=a-b;
+                }
+                function multiplyOutput()
+                {
+                    var a=parseInt(document.getElementById('num1').value);
+                    var b=parseInt(document.getElementById('num2').value);
+                    document.getElementById('result').innerHTML=a*b;
+                }
+                function divideOutput()
+                {
+                    var a=parseInt(document.getElementById('num1').value);
+                    var b=parseInt(document.getElementById('num2').value);
+                    document.getElementById('result').innerHTML=a/b;
+                }
+            </script>
+        </form>
+     </main>
+  </body>
+</html>
